@@ -47,8 +47,10 @@
             toolStripMenuItem1 = new ToolStripSeparator();
             showAppWindowToolStripMenuItem = new ToolStripMenuItem();
             timer1 = new System.Windows.Forms.Timer(components);
+            dataGridView1 = new DataGridView();
             toolStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -188,11 +190,22 @@
             timer1.Interval = 3000;
             timer1.Tick += timer1_Tick;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 49);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(800, 379);
+            dataGridView1.TabIndex = 3;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
@@ -205,6 +218,7 @@
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -228,5 +242,6 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton toolSaveButton;
         private ToolStripSeparator toolStripSeparator2;
+        private DataGridView dataGridView1;
     }
 }
